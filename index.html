@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besok hari apa?</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #teks {
+            color: white;
+            font-family: monospace;
+            font-size: 50px;
+        }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        span {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div id="teks"></div>
+        <a href="https://instagram.com/zxcofx">Made by <span>zxcofx</span></a>
+    </div>    
+    <script>
+        let hari;
+        var tgl = new Date().getDay();
+        tgl++
+        switch(tgl) {
+            case 0:
+                hari = "Besok senin.";
+                break;
+            case 1:
+                hari = "Besok selasa.";
+                break;
+            case 2:
+                hari = "Besok rabu.";
+                break;
+            case 3:
+                hari = "Besok kamis.";
+                break;
+            case 4:
+                hari = "Besok jumat.";
+                break;
+            case 5:
+                hari = "Besok sabtu.";
+                break;
+            case 6:
+                hari = "Besok minggu.";
+        }
+        document.getElementById("teks").innerHTML = hari;
+    </script>
+</body>
+</html>
